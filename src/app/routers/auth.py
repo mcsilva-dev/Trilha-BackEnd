@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
 from app.models.usuario import Usuario
-from app.schamas.usuario import UsuarioCreate, UsuarioLogin, UsuarioResponse, Token
+from app.schemas.usuario import UsuarioCreate, UsuarioLogin, UsuarioResponse, Token
 from app.services.auth import registrar_usuario, login
 from app.utils.dependencies import get_db, get_current_user
 

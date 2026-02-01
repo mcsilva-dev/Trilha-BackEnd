@@ -9,7 +9,7 @@ class UsuarioCreate(BaseModel):
     nome: str
     email: EmailStr
     senha: str
-    tipo_usuario: TipoUsuario.paciente
+    tipo_usuario: TipoUsuario = TipoUsuario.paciente
 
 
 class UsuarioLogin(BaseModel):

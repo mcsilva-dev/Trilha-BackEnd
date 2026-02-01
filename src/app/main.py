@@ -5,8 +5,8 @@ from fastapi.responses import JSONResponse
 from app.routers import auth
 
 app = FastAPI(
-    title="SGHSS - Sistemas de Gestão de Hospitalar",
-    description="API para gerenciamento de hospitalar",
+    title="SGHSS - Sistema de Gestão Hospitalar",
+    description="API do Sistema de Gestão Hospitalar e de Serviços de Saúde da VidaPlus",
     version="1.0.0"
 )
 

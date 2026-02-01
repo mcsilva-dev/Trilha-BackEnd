@@ -2,6 +2,8 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
+from app.routers import auth
+
 app = FastAPI(
     title="SGHSS - Sistemas de Gestão de Hospitalar",
     description="API para gerenciamento de hospitalar",
@@ -22,6 +24,9 @@ async def handler_erro_geral(request: Request, exc: Exception):
         status_code=500,
         content={"detail": "Erro interno do servidor"},
     )
+
+
+app.include_router(auth.router)
 
 
 @app.get("/", tags=["Root"])

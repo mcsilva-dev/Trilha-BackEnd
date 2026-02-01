@@ -8,8 +8,8 @@ from app.utils.dependencies import get_db, get_current_user
 
 router = APIRouter(prefix="/auth", tags=["Autenticação"])
 
-@router.post("/singup", response_model=UsuarioResponse, status_code=status.HTTP_201_CREATED)
-def singup(usuario: UsuarioCreate, db: Session = Depends(get_db)):
+@router.post("/signup", response_model=UsuarioResponse, status_code=status.HTTP_201_CREATED)
+def signup(usuario: UsuarioCreate, db: Session = Depends(get_db)):
     return registrar_usuario(db, usuario)
 
 

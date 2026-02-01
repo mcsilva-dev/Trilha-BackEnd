@@ -11,7 +11,7 @@ def registrar_usuario(db: Session, dados: UsuarioCreate) -> Usuario:
     if existe:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            datail="Email já cadastrado"
+            detail="Email já cadastrado"
         )
     
     usuario = Usuario(

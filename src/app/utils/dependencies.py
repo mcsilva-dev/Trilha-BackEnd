@@ -31,7 +31,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
             detail="Token inválido",
         )
     
-    usuario = db.query(Usuario).filter(Usuario.id == int(usuario.id)).first()
+    usuario = db.query(Usuario).filter(Usuario.id == int(usuario)).first()
     if usuario is None or not usuario.ativo:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

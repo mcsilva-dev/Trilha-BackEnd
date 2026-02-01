@@ -5,8 +5,8 @@ class Settings(BaseSettings):
     
     DB_HOST: str = "localhost"
     DB_PORT: int = 3306
-    DB_USER: str = "sghss_user"
-    DB_PASSWORD: str = "sghss_pass"
+    DB_USER: str = "admin"
+    DB_PASSWORD: str = "admin"
     DB_NAME: str = "sghss_db"
 
     JWT_SECRET_KEY: str = "sghss_secret_key"

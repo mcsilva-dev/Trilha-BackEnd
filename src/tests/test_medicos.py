@@ -19,7 +19,7 @@ def test_criar_medico_crm_duplicado(client, auth_header, db):
     outro = Usuario(
         nome="Dr. Pedro",
         email="pedro@email.com",
-        senha_hash=hash_senha("123456"),
+        senha=hash_senha("123456"),
         tipo_usuario="medico",
     )
     db.add(outro)

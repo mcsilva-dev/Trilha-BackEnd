@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.routers import auth, pacientes, medicos
+from app.routers import auth, pacientes, medicos, consultas
 
 app = FastAPI(
     title="SGHSS - Sistema de Gestão Hospitalar",
@@ -29,6 +29,7 @@ async def handler_erro_geral(request: Request, exc: Exception):
 app.include_router(auth.router)
 app.include_router(pacientes.router)
 app.include_router(medicos.router)
+app.include_router(consultas.router)
 
 
 @app.get("/", tags=["Root"])

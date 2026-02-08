@@ -30,6 +30,7 @@ app.include_router(auth.router)
 app.include_router(pacientes.router)
 app.include_router(medicos.router)
 app.include_router(consultas.router)
+app.include_router(prontuarios.router)
 
 
 @app.get("/", tags=["Root"])

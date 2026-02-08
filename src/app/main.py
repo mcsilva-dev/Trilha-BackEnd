@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.routers import auth, pacientes, medicos, consultas
+from app.routers import auth, pacientes, medicos, consultas, prontuarios
 
 app = FastAPI(
     title="SGHSS - Sistema de Gestão Hospitalar",

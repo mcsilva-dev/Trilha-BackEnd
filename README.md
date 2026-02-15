@@ -42,6 +42,7 @@ Instale o docker seguindo o passo a passo disponivel em https://docs.docker.com/
 ### 4. Subir o banco de dados
 
 ```bash
+cd src
 docker-compose up -d
 ```
 

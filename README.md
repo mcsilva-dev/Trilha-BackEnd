@@ -24,7 +24,7 @@ API Back-end para gerenciamento hospitalar da instituição **VidaPlus**, desenv
 
 ```bash
 git clone <url-do-repositorio>
-cd sghss
+cd Trilha-BackEnd
 ```
 
 ### 2. Configurar variáveis de ambiente

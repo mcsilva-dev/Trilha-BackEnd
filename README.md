@@ -35,20 +35,24 @@ cp .env.example .env
 
 Edite o arquivo `.env` conforme necessário.
 
-### 3. Subir o banco de dados
+### 3. Instalar docker
+
+Instale o docker seguindo o passo a passo disponivel em https://docs.docker.com/engine/install/
+
+### 4. Subir o banco de dados
 
 ```bash
 docker-compose up -d
 ```
 
-### 4. Instalar gerenciador de dependências uv
+### 5. Instalar gerenciador de dependências uv
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | bash # Linux
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex" # Windows
 ```
 
-### 5. Criar ambiente virtual e instalar dependências
+### 6. Criar ambiente virtual e instalar dependências
 
 ```bash
 uv venv
@@ -57,13 +61,13 @@ source venv/Scripts/activate  # Windows
 uv sync
 ```
 
-### 6. Executar migrations
+### 7. Executar migrations
 
 ```bash
 alembic upgrade head
 ```
 
-### 7. Rodar a aplicação
+### 8. Rodar a aplicação
 
 ```bash
 uvicorn app.main:app --reload

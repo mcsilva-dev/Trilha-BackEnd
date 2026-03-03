@@ -78,6 +78,8 @@ A API estará disponível em `http://localhost:8000`.
 
 A documentação interativa (Swagger) pode ser acessada em `http://localhost:8000/docs`.
 
+Utilizar postman para testar os endpoints.
+
 ## Estrutura do Projeto
 
 ```
@@ -143,7 +145,7 @@ sghss/
 | PUT    | /exames/{id}                      | Atualizar resultado              |
 | GET    | /exames/{id}                      | Detalhe do exame                 |
 
-Documentação detalhada com exemplos de request/response em [docs/endpoints.md](docs/endpoints.md).
+Documentação detalhada com exemplos de request/response em [docs/endpoints.md](src/docs/endpoints.md).
 
 ## Testes
 
